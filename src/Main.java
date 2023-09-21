@@ -4,17 +4,30 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        int resultOne = add(1, 2);
+        System.out.println("What two numbers do you want to add? Please enter the two numbers seperately. ");
+        int numOne = scanner.nextInt();
+        int numTwo = scanner.nextInt();
+        int resultOne = add(numOne, numTwo);
         System.out.println(resultOne);
 
-        String resultTwo = greeting("Audrey");
+        System.out.println("What is your name?");
+        String name = scanner.next();
+        String resultTwo = greeting(name);
         System.out.println(resultTwo);
 
-        int resultThree = add(5, 6, 7, 8);
+        System.out.println("What four numbers do you want to add? Please enter the four numbers seperately. ");
+        int one = scanner.nextInt();
+        int two = scanner.nextInt();
+        int three = scanner.nextInt();
+        int four = scanner.nextInt();
+        int resultThree = add(one, two, three, four);
         System.out.println(resultThree);
 
-        printMe("Oh no this test is so scaryyy");
+        Scanner newscanner = new Scanner(System.in);
+
+        System.out.println("What do you want to print?");
+        String text = newscanner.nextLine();
+        printMe(text);
     }
 
     public static int add(int numOne, int numTwo) {
